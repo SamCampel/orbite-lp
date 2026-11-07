@@ -167,17 +167,17 @@ function App() {
           <div className="s-label">Funcionalidades</div>
           <h2 className="s-h2">Tres ferramentas.<br /><span style={{ color: 'var(--text-dim)' }}>Uma plataforma.</span></h2>
           <div className="feat-list">
-            <div className="feat-row fx-glow">
+            <div className="feat-row">
               <div className="feat-n">01</div>
               <div className="feat-title">Assistente Fiscal<div className="feat-pill live">Disponivel</div></div>
               <div className="feat-info">Pergunte sobre IBS, CBS, NFS-e ou Simples Nacional. Receba respostas com citacao da lei, nao opinioes. Importe planilhas e deixe a IA analisar os dados fiscais dos seus clientes.</div>
             </div>
-            <div className="feat-row fx-glow">
+            <div className="feat-row">
               <div className="feat-n">02</div>
               <div className="feat-title">Radar de Mudancas<div className="feat-pill live">Disponivel</div></div>
               <div className="feat-info">Acompanhe alteracoes na legislacao fiscal em tempo real. Sem garimpar no Diario Oficial. Sem depender de grupo de WhatsApp.</div>
             </div>
-            <div className="feat-row fx-glow">
+            <div className="feat-row">
               <div className="feat-n">03</div>
               <div className="feat-title">Simulador de Regime 2027<div className="feat-pill soon">Em breve</div></div>
               <div className="feat-info">Calcule qual regime do Simples Nacional e mais vantajoso para cada cliente: hibrido ou puro. Com base no faturamento, setor e perfil de vendas B2B.</div>
@@ -189,7 +189,7 @@ function App() {
           <div className="s-label">Depoimentos</div>
           <h2 className="s-h2">Contadores que ja usam</h2>
           <div className="t-grid">
-            <div className="t-card fx-glow">
+            <div className="t-card">
               <p className="t-text">O Orbite me ajuda a entender a Reforma de forma <strong>rapida e segura</strong>. Nunca vi uma ferramenta citar a lei tao claramente. Virou parte da minha rotina diaria.</p>
               <div className="t-auth">
                 <div className="t-av">RM</div>
@@ -199,7 +199,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="t-card fx-glow">
+            <div className="t-card">
               <p className="t-text">Atendo mais de 150 clientes do Simples. Com o Orbite, consigo orientar cada um com <strong>seguranca juridica</strong> sobre a decisao de 2027.</p>
               <div className="t-auth">
                 <div className="t-av">JO</div>
@@ -209,7 +209,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="t-card fx-glow">
+            <div className="t-card">
               <p className="t-text">No Orbite, encontro respostas fiscais e <strong>referencias legais reunidas em uma ferramenta voltada a rotina contabil</strong>. Isso facilita a consulta no dia a dia.</p>
               <div className="t-auth">
                 <div className="t-av">CS</div>
@@ -227,7 +227,7 @@ function App() {
           <h2 className="s-h2" style={{ marginBottom: 12 }}>Sem surpresas.</h2>
           <p className="s-body">Sem taxa de setup. Cancele quando quiser.</p>
           <div className="p-grid">
-            <div className="p-card fx-glow">
+            <div className="p-card">
               <div className="p-tier">Essencial</div>
               <div className="p-price">R$79<sub>/mes</sub></div>
               <div className="p-desc">Para escritorios que querem se manter atualizados.</div>
@@ -258,7 +258,7 @@ function App() {
               <a href="https://wa.me/5511912470733?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20mudar%20para%20o%20plano%20Profissional%20do%20Orbite.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" className="p-btn hot" target="_blank" rel="noreferrer noopener">Assinar plano</a>
             </div>
 
-            <div className="p-card fx-glow">
+            <div className="p-card">
               <div className="p-tier">Corporativo</div>
               <div className="p-price">R$199<sub>/mes</sub></div>
               <div className="p-desc">Para grandes escritorios com muitos clientes.</div>

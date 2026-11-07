@@ -532,19 +532,19 @@ a {
 .fx-glow {
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--border);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  border: 1px solid rgba(245, 158, 11, 0.14);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.004));
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .fx-glow::before {
   content: "";
   position: absolute;
-  inset: -30% auto auto -10%;
-  width: 45%;
+  inset: -30% auto auto -15%;
+  width: 38%;
   height: 180%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
   transform: translateX(-120%) rotate(16deg);
   opacity: 0;
   transition: transform 0.8s ease, opacity 0.3s ease;
@@ -552,14 +552,13 @@ a {
 }
 
 .fx-glow:hover {
-  border-color: rgba(245, 158, 11, 0.35);
-  box-shadow: 0 22px 70px rgba(245, 158, 11, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  transform: translateY(-2px);
+  border-color: rgba(245, 158, 11, 0.26);
+  box-shadow: 0 16px 40px rgba(245, 158, 11, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .fx-glow:hover::before {
   opacity: 1;
-  transform: translateX(220%) rotate(16deg);
+  transform: translateX(240%) rotate(16deg);
 }
 
 .compare-wrap {
