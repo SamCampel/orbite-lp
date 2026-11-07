@@ -345,6 +345,15 @@ a {
   flex-wrap: wrap;
 }
 
+.hero-shiny-button {
+  min-width: 190px;
+  padding: 1.1rem 2.2rem !important;
+  font-size: 0.96rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 0 1px rgba(245, 184, 74, 0.15), 0 18px 30px rgba(245, 184, 74, 0.12) !important;
+}
+
 .btn-main,
 .btn-ghost {
   display: inline-flex;

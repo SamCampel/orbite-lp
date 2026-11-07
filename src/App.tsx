@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { ButtonWithIcon } from '../components/ui/button-witn-icon';
 import { LiquidMetalButton } from '../components/ui/liquid-metal-button';
+import { ShinyButton } from '../components/ui/shiny-button';
 
 const showPlans = false;
 
@@ -100,14 +100,15 @@ function App() {
           </p>
 
           <div className="hero-actions">
-            <LiquidMetalButton
+            <ShinyButton
               label="Começar agora"
-              width={178}
-              height={52}
-              accentColor="#f6c96a"
+              fillColor="#100d0c"
+              accentColor="#f5b84a"
+              accentSoftColor="#ffe4ad"
+              labelColor="#f7f1e9"
               onClick={() => window.open('https://orbite-assistente-c15dj4y28-samuels-projects-b63dc5c1.vercel.app/', '_blank', 'noopener,noreferrer')}
+              className="hero-shiny-button"
             />
-            <ButtonWithIcon href="#features">Ver funcionalidades</ButtonWithIcon>
           </div>
 
           <div className="hero-metrics" aria-label="Principais diferenciais do Orbite">
