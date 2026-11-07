@@ -60,7 +60,15 @@ function App() {
           >
             <span className="theme-toggle-icon" aria-hidden="true">{theme === 'light' ? '☾' : '☀'}</span>
           </button>
-          <a href="https://orbite-assistente-c15dj4y28-samuels-projects-b63dc5c1.vercel.app/" className="nav-btn">Comecar agora</a>
+          <div className="nav-btn-wrap">
+            <LiquidMetalButton
+              label="Começar agora"
+              width={142}
+              height={38}
+              accentColor="#f8cf87"
+              onClick={() => window.open('https://orbite-assistente-c15dj4y28-samuels-projects-b63dc5c1.vercel.app/', '_blank', 'noopener,noreferrer')}
+            />
+          </div>
           <button className="nav-menu-toggle" type="button" aria-label="Abrir menu de navegacao" aria-controls="primary-navigation" aria-expanded="false">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path d="M4 6h16M4 12h16M4 18h16" />
@@ -89,8 +97,21 @@ function App() {
           </p>
 
           <div className="hero-actions">
-            <LiquidMetalButton label="Começar agora" onClick={() => window.open('https://orbite-assistente-c15dj4y28-samuels-projects-b63dc5c1.vercel.app/', '_blank', 'noopener,noreferrer')} />
-            <a href="#features" className="btn-ghost">Ver funcionalidades</a>
+            <LiquidMetalButton
+              label="Começar agora"
+              width={178}
+              height={52}
+              accentColor="#f6c96a"
+              onClick={() => window.open('https://orbite-assistente-c15dj4y28-samuels-projects-b63dc5c1.vercel.app/', '_blank', 'noopener,noreferrer')}
+            />
+            <LiquidMetalButton
+              label="Ver funcionalidades"
+              width={178}
+              height={52}
+              accentColor="#dfe8ef"
+              labelColor="#f4f5f7"
+              onClick={() => window.location.href = '#features'}
+            />
           </div>
 
           <div className="hero-metrics" aria-label="Principais diferenciais do Orbite">
@@ -245,7 +266,15 @@ function App() {
                 <div className="p-feat"><span className="p-chk">+</span>1 usuario</div>
                 <div className="p-feat"><span className="p-chk">+</span>Suporte por e-mail</div>
               </div>
-              <a href="https://wa.me/5511912470733?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20mudar%20para%20o%20plano%20Essencial%20do%20Orbite.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" className="p-btn def" target="_blank" rel="noreferrer noopener">Comecar agora</a>
+              <div className="p-btn-wrap">
+                <LiquidMetalButton
+                  label="Começar agora"
+                  width={220}
+                  height={46}
+                  accentColor="#f6c96a"
+                  onClick={() => window.open('https://wa.me/5511912470733?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20mudar%20para%20o%20plano%20Essencial%20do%20Orbite.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F', '_blank', 'noopener,noreferrer')}
+                />
+              </div>
             </div>
 
             <div className="p-card hot fx-glow liquid-glass">
@@ -280,7 +309,15 @@ function App() {
                 <div className="p-feat"><span className="p-chk">+</span>Atendimento dedicado</div>
                 <div className="p-feat"><span className="p-chk">+</span>Onboarding personalizado</div>
               </div>
-              <a href="https://wa.me/5511912470733?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20mudar%20para%20o%20plano%20Corporativo%20do%20Orbite.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" className="p-btn def" target="_blank" rel="noreferrer noopener">Falar com especialista</a>
+              <div className="p-btn-wrap">
+                <LiquidMetalButton
+                  label="Falar com especialista"
+                  width={220}
+                  height={46}
+                  accentColor="#f6c96a"
+                  onClick={() => window.open('https://wa.me/5511912470733?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20mudar%20para%20o%20plano%20Corporativo%20do%20Orbite.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F', '_blank', 'noopener,noreferrer')}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -294,6 +331,9 @@ function App() {
             <div className="cta-button-wrap">
               <LiquidMetalButton
                 label="Começar agora"
+                width={220}
+                height={54}
+                accentColor="#f6c96a"
                 onClick={() => window.open('https://orbite-assistente-c15dj4y28-samuels-projects-b63dc5c1.vercel.app/', '_blank', 'noopener,noreferrer')}
               />
             </div>

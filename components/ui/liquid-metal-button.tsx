@@ -7,12 +7,22 @@ interface LiquidMetalButtonProps {
   label?: string;
   onClick?: () => void;
   viewMode?: 'text' | 'icon';
+  className?: string;
+  width?: number;
+  height?: number;
+  accentColor?: string;
+  labelColor?: string;
 }
 
 export function LiquidMetalButton({
   label = 'Get Started',
   onClick,
   viewMode = 'text',
+  className = '',
+  width,
+  height,
+  accentColor = '#f8d49a',
+  labelColor = '#f6f1ea',
 }: LiquidMetalButtonProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
@@ -23,26 +33,29 @@ export function LiquidMetalButton({
   const rippleId = useRef(0);
 
   const dimensions = useMemo(() => {
+    const resolvedWidth = width ?? (viewMode === 'icon' ? 46 : 142);
+    const resolvedHeight = height ?? (viewMode === 'icon' ? 46 : 46);
+
     if (viewMode === 'icon') {
       return {
-        width: 46,
-        height: 46,
-        innerWidth: 42,
-        innerHeight: 42,
-        shaderWidth: 46,
-        shaderHeight: 46,
+        width: resolvedWidth,
+        height: resolvedHeight,
+        innerWidth: resolvedWidth - 4,
+        innerHeight: resolvedHeight - 4,
+        shaderWidth: resolvedWidth,
+        shaderHeight: resolvedHeight,
       };
     }
 
     return {
-      width: 142,
-      height: 46,
-      innerWidth: 138,
-      innerHeight: 42,
-      shaderWidth: 142,
-      shaderHeight: 46,
+      width: resolvedWidth,
+      height: resolvedHeight,
+      innerWidth: resolvedWidth - 4,
+      innerHeight: resolvedHeight - 4,
+      shaderWidth: resolvedWidth,
+      shaderHeight: resolvedHeight,
     };
-  }, [viewMode]);
+  }, [height, viewMode, width]);
 
   useEffect(() => {
     const styleId = 'shader-canvas-style-exploded';
@@ -154,7 +167,7 @@ export function LiquidMetalButton({
   };
 
   return (
-    <div className="relative inline-block">
+    <div className={`relative inline-block ${className}`.trim()}>
       <div
         style={{
           perspective: '1000px',
@@ -206,9 +219,10 @@ export function LiquidMetalButton({
               <span
                 style={{
                   fontSize: '14px',
-                  color: '#666666',
-                  fontWeight: 400,
-                  textShadow: '0px 1px 2px rgba(0, 0, 0, 0.5)',
+                  color: labelColor,
+                  fontWeight: 700,
+                  letterSpacing: '0.02em',
+                  textShadow: `0 0 12px ${accentColor}66, 0 2px 4px rgba(0, 0, 0, 0.5)`,
                   transition: 'all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)',
                   transform: 'scale(1)',
                   whiteSpace: 'nowrap',

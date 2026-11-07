@@ -202,17 +202,17 @@ a {
   font-family: var(--font);
 }
 
-.nav-btn {
+.nav-btn-wrap,
+.hero-actions > div,
+.p-btn-wrap,
+.cta-button-wrap {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
-  font-weight: 600;
-  color: #060507;
-  background: var(--amber);
-  padding: 7px 18px;
-  border-radius: 6px;
-  transition: background 0.15s, transform 0.1s;
+}
+
+.nav-btn-wrap {
+  min-width: 142px;
 }
 
 .nav-btn:hover,
@@ -229,19 +229,19 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 120px 40px 100px;
+  padding: 150px 40px 96px;
   overflow: hidden;
 }
 
 .hero-radial {
   position: absolute;
-  top: 0;
+  top: -10%;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  max-width: 1000px;
-  height: 70%;
-  background: radial-gradient(ellipse 80% 70% at 50% -10%, rgba(245, 158, 11, 0.22) 0%, rgba(232, 130, 10, 0.1) 35%, rgba(245, 158, 11, 0.03) 60%, transparent 100%);
+  width: min(1200px, 100%);
+  height: 85%;
+  background: radial-gradient(ellipse at 50% 10%, rgba(245, 158, 11, 0.24) 0%, rgba(245, 158, 11, 0.12) 24%, rgba(245, 158, 11, 0.04) 42%, transparent 72%);
+  filter: blur(18px);
   pointer-events: none;
 }
 
@@ -273,25 +273,27 @@ a {
 }
 
 .hero-h1 {
-  font-size: clamp(52px, 8.5vw, 120px);
+  font-size: clamp(56px, 8vw, 118px);
   font-weight: 900;
   line-height: 0.9;
-  letter-spacing: -0.06em;
-  margin-bottom: 32px;
+  letter-spacing: -0.065em;
+  margin-bottom: 26px;
   position: relative;
   z-index: 1;
-  max-width: 1100px;
+  max-width: 1120px;
+  text-wrap: balance;
 }
 
 .hero-h1 .dim {
-  color: var(--text-dim);
+  color: rgba(240, 240, 240, 0.72);
 }
 
 .hero-h1 .hot {
-  background: linear-gradient(135deg, var(--amber-soft) 0%, var(--amber) 40%, var(--amber2) 80%, rgba(232, 130, 10, 0.5) 100%);
+  background: linear-gradient(135deg, #fff2b4 0%, var(--amber-soft) 18%, var(--amber) 42%, #f59e0b 72%, #e7831f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: 0 0 30px rgba(245, 158, 11, 0.2);
 }
 
 .hero-sub {
@@ -382,6 +384,7 @@ a {
   margin-top: 56px;
   border-radius: 18px;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hw-bar {
