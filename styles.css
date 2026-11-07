@@ -744,6 +744,12 @@
       margin-top: 56px
     }
 
+    #planos,
+    .nav-links a[href="#planos"],
+    .f-links a[href="#planos"] {
+      display: none
+    }
+
     .p-card {
       border-radius: 16px;
       padding: 32px;
