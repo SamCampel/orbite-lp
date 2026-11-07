@@ -93,7 +93,13 @@ function App() {
             <a href="#features" className="btn-ghost">Ver funcionalidades</a>
           </div>
 
-          <div className="hero-window">
+          <div className="hero-metrics" aria-label="Principais diferenciais do Orbite">
+            <div className="metric-pill liquid-glass"><span>10x</span> mais rapidez</div>
+            <div className="metric-pill liquid-glass"><span>100%</span> base legal</div>
+            <div className="metric-pill liquid-glass"><span>2027</span> pronto</div>
+          </div>
+
+          <div className="hero-window liquid-glass">
             <div className="hw-bar">
               <div className="hw-dot" />
               <div className="hw-dot" />
@@ -242,7 +248,7 @@ function App() {
               <a href="https://wa.me/5511912470733?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20mudar%20para%20o%20plano%20Essencial%20do%20Orbite.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" className="p-btn def" target="_blank" rel="noreferrer noopener">Comecar agora</a>
             </div>
 
-            <div className="p-card hot fx-glow">
+            <div className="p-card hot fx-glow liquid-glass">
               <div className="p-badge">Mais popular</div>
               <div className="p-tier">Profissional</div>
               <div className="p-price">R$129<sub>/mes</sub></div>
@@ -255,7 +261,12 @@ function App() {
                 <div className="p-feat"><span className="p-chk">+</span>3 usuarios</div>
                 <div className="p-feat"><span className="p-chk">+</span>Suporte prioritario</div>
               </div>
-              <a href="https://wa.me/5511912470733?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20mudar%20para%20o%20plano%20Profissional%20do%20Orbite.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" className="p-btn hot" target="_blank" rel="noreferrer noopener">Assinar plano</a>
+              <div className="p-btn-wrap">
+                <LiquidMetalButton
+                  label="Assinar plano"
+                  onClick={() => window.open('https://wa.me/5511912470733?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20mudar%20para%20o%20plano%20Profissional%20do%20Orbite.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F', '_blank', 'noopener,noreferrer')}
+                />
+              </div>
             </div>
 
             <div className="p-card">
@@ -274,13 +285,18 @@ function App() {
           </div>
         </div>
 
-        <section className="cta-wrap">
+        <section className="cta-wrap liquid-glass">
           <div className="cta-glow" />
           <div className="cta-inner">
             <div className="cta-label">Comece hoje</div>
             <h2 className="cta-h2">A reforma<br />nao vai<br /><em>esperar.</em></h2>
             <p className="cta-sub">Mais de 60 mil escritorios contabeis precisam decidir o regime dos clientes ate 2027. O Orbite existe para que voce chegue la com seguranca.</p>
-            <a href="https://orbite-assistente-c15dj4y28-samuels-projects-b63dc5c1.vercel.app/" className="btn-main" style={{ fontSize: 15, padding: '14px 32px' }}>Comecar agora</a>
+            <div className="cta-button-wrap">
+              <LiquidMetalButton
+                label="Começar agora"
+                onClick={() => window.open('https://orbite-assistente-c15dj4y28-samuels-projects-b63dc5c1.vercel.app/', '_blank', 'noopener,noreferrer')}
+              />
+            </div>
           </div>
         </section>
       </main>
