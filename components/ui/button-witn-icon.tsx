@@ -18,14 +18,14 @@ export function ButtonWithIcon({
   const content = (
     <>
       <span className="relative z-10 transition-all duration-500">{children}</span>
-      <div className="absolute right-1 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-[#121214] transition-all duration-500 group-hover:right-[calc(100%-44px)] group-hover:rotate-45">
+      <div className="absolute right-1 flex h-10 w-10 translate-x-0 items-center justify-center rounded-full bg-white/90 text-[#121214] transition-all duration-500 group-hover:-translate-x-[92px] group-hover:rotate-45">
         <ArrowUpRight size={16} />
       </div>
     </>
   );
 
   const commonClassName = [
-    'group relative h-12 w-fit overflow-hidden rounded-full border border-white/10 bg-[rgba(255,255,255,0.03)] px-6 pe-14 text-sm font-medium text-white transition-all duration-500 hover:ps-14 hover:pe-6',
+    'group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-[rgba(255,255,255,0.03)] px-6 pe-14 text-sm font-medium text-white transition-all duration-500 hover:ps-14 hover:pe-6',
     className,
   ].join(' ');
 
