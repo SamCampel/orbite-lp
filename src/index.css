@@ -529,6 +529,39 @@ a {
   font-weight: 500;
 }
 
+.fx-glow {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.fx-glow::before {
+  content: "";
+  position: absolute;
+  inset: -30% auto auto -10%;
+  width: 45%;
+  height: 180%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  transform: translateX(-120%) rotate(16deg);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.fx-glow:hover {
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 22px 70px rgba(245, 158, 11, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+}
+
+.fx-glow:hover::before {
+  opacity: 1;
+  transform: translateX(220%) rotate(16deg);
+}
+
 .compare-wrap {
   margin-top: 70px;
   display: grid;
