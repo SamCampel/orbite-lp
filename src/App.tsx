@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
+import { ButtonWithIcon } from '../components/ui/button-witn-icon';
 import { LiquidMetalButton } from '../components/ui/liquid-metal-button';
+
+const showPlans = false;
 
 function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
@@ -104,14 +107,7 @@ function App() {
               accentColor="#f6c96a"
               onClick={() => window.open('https://orbite-assistente-c15dj4y28-samuels-projects-b63dc5c1.vercel.app/', '_blank', 'noopener,noreferrer')}
             />
-            <LiquidMetalButton
-              label="Ver funcionalidades"
-              width={178}
-              height={52}
-              accentColor="#dfe8ef"
-              labelColor="#f4f5f7"
-              onClick={() => window.location.href = '#features'}
-            />
+            <ButtonWithIcon href="#features">Ver funcionalidades</ButtonWithIcon>
           </div>
 
           <div className="hero-metrics" aria-label="Principais diferenciais do Orbite">
@@ -249,78 +245,80 @@ function App() {
           </div>
         </div>
 
-        <div className="s" id="planos" style={{ paddingTop: 0 }}>
-          <div className="s-label">Planos</div>
-          <h2 className="s-h2" style={{ marginBottom: 12 }}>Sem surpresas.</h2>
-          <p className="s-body">Sem taxa de setup. Cancele quando quiser.</p>
-          <div className="p-grid">
-            <div className="p-card">
-              <div className="p-tier">Essencial</div>
-              <div className="p-price">R$79<sub>/mes</sub></div>
-              <div className="p-desc">Para escritorios que querem se manter atualizados.</div>
-              <div className="p-sep" />
-              <div className="p-feats">
-                <div className="p-feat"><span className="p-chk">+</span>Assistente Fiscal ilimitado</div>
-                <div className="p-feat"><span className="p-chk">+</span>Radar de Mudancas</div>
-                <div className="p-feat"><span className="p-chk">+</span>Leitura de planilhas</div>
-                <div className="p-feat"><span className="p-chk">+</span>1 usuario</div>
-                <div className="p-feat"><span className="p-chk">+</span>Suporte por e-mail</div>
+        {showPlans && (
+          <div className="s" id="planos" style={{ paddingTop: 0 }}>
+            <div className="s-label">Planos</div>
+            <h2 className="s-h2" style={{ marginBottom: 12 }}>Sem surpresas.</h2>
+            <p className="s-body">Sem taxa de setup. Cancele quando quiser.</p>
+            <div className="p-grid">
+              <div className="p-card">
+                <div className="p-tier">Essencial</div>
+                <div className="p-price">R$79<sub>/mes</sub></div>
+                <div className="p-desc">Para escritorios que querem se manter atualizados.</div>
+                <div className="p-sep" />
+                <div className="p-feats">
+                  <div className="p-feat"><span className="p-chk">+</span>Assistente Fiscal ilimitado</div>
+                  <div className="p-feat"><span className="p-chk">+</span>Radar de Mudancas</div>
+                  <div className="p-feat"><span className="p-chk">+</span>Leitura de planilhas</div>
+                  <div className="p-feat"><span className="p-chk">+</span>1 usuario</div>
+                  <div className="p-feat"><span className="p-chk">+</span>Suporte por e-mail</div>
+                </div>
+                <div className="p-btn-wrap">
+                  <LiquidMetalButton
+                    label="Começar agora"
+                    width={220}
+                    height={46}
+                    accentColor="#f6c96a"
+                    onClick={() => window.open('https://wa.me/5511912470733?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20mudar%20para%20o%20plano%20Essencial%20do%20Orbite.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F', '_blank', 'noopener,noreferrer')}
+                  />
+                </div>
               </div>
-              <div className="p-btn-wrap">
-                <LiquidMetalButton
-                  label="Começar agora"
-                  width={220}
-                  height={46}
-                  accentColor="#f6c96a"
-                  onClick={() => window.open('https://wa.me/5511912470733?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20mudar%20para%20o%20plano%20Essencial%20do%20Orbite.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F', '_blank', 'noopener,noreferrer')}
-                />
-              </div>
-            </div>
 
-            <div className="p-card hot fx-glow liquid-glass">
-              <div className="p-badge">Mais popular</div>
-              <div className="p-tier">Profissional</div>
-              <div className="p-price">R$129<sub>/mes</sub></div>
-              <div className="p-desc">Para escritorios que querem vantagem real.</div>
-              <div className="p-sep" />
-              <div className="p-feats">
-                <div className="p-feat"><span className="p-chk">+</span>Tudo do Essencial</div>
-                <div className="p-feat"><span className="p-chk">+</span>Simulador de Regime 2027 (em breve)</div>
-                <div className="p-feat"><span className="p-chk">+</span>Historico completo de consultas</div>
-                <div className="p-feat"><span className="p-chk">+</span>3 usuarios</div>
-                <div className="p-feat"><span className="p-chk">+</span>Suporte prioritario</div>
+              <div className="p-card hot fx-glow liquid-glass">
+                <div className="p-badge">Mais popular</div>
+                <div className="p-tier">Profissional</div>
+                <div className="p-price">R$129<sub>/mes</sub></div>
+                <div className="p-desc">Para escritorios que querem vantagem real.</div>
+                <div className="p-sep" />
+                <div className="p-feats">
+                  <div className="p-feat"><span className="p-chk">+</span>Tudo do Essencial</div>
+                  <div className="p-feat"><span className="p-chk">+</span>Simulador de Regime 2027 (em breve)</div>
+                  <div className="p-feat"><span className="p-chk">+</span>Historico completo de consultas</div>
+                  <div className="p-feat"><span className="p-chk">+</span>3 usuarios</div>
+                  <div className="p-feat"><span className="p-chk">+</span>Suporte prioritario</div>
+                </div>
+                <div className="p-btn-wrap">
+                  <LiquidMetalButton
+                    label="Assinar plano"
+                    onClick={() => window.open('https://wa.me/5511912470733?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20mudar%20para%20o%20plano%20Profissional%20do%20Orbite.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F', '_blank', 'noopener,noreferrer')}
+                  />
+                </div>
               </div>
-              <div className="p-btn-wrap">
-                <LiquidMetalButton
-                  label="Assinar plano"
-                  onClick={() => window.open('https://wa.me/5511912470733?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20mudar%20para%20o%20plano%20Profissional%20do%20Orbite.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F', '_blank', 'noopener,noreferrer')}
-                />
-              </div>
-            </div>
 
-            <div className="p-card">
-              <div className="p-tier">Corporativo</div>
-              <div className="p-price">R$199<sub>/mes</sub></div>
-              <div className="p-desc">Para grandes escritorios com muitos clientes.</div>
-              <div className="p-sep" />
-              <div className="p-feats">
-                <div className="p-feat"><span className="p-chk">+</span>Tudo do Profissional</div>
-                <div className="p-feat"><span className="p-chk">+</span>Usuarios ilimitados</div>
-                <div className="p-feat"><span className="p-chk">+</span>Atendimento dedicado</div>
-                <div className="p-feat"><span className="p-chk">+</span>Onboarding personalizado</div>
-              </div>
-              <div className="p-btn-wrap">
-                <LiquidMetalButton
-                  label="Falar com especialista"
-                  width={220}
-                  height={46}
-                  accentColor="#f6c96a"
-                  onClick={() => window.open('https://wa.me/5511912470733?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20mudar%20para%20o%20plano%20Corporativo%20do%20Orbite.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F', '_blank', 'noopener,noreferrer')}
-                />
+              <div className="p-card">
+                <div className="p-tier">Corporativo</div>
+                <div className="p-price">R$199<sub>/mes</sub></div>
+                <div className="p-desc">Para grandes escritorios com muitos clientes.</div>
+                <div className="p-sep" />
+                <div className="p-feats">
+                  <div className="p-feat"><span className="p-chk">+</span>Tudo do Profissional</div>
+                  <div className="p-feat"><span className="p-chk">+</span>Usuarios ilimitados</div>
+                  <div className="p-feat"><span className="p-chk">+</span>Atendimento dedicado</div>
+                  <div className="p-feat"><span className="p-chk">+</span>Onboarding personalizado</div>
+                </div>
+                <div className="p-btn-wrap">
+                  <LiquidMetalButton
+                    label="Falar com especialista"
+                    width={220}
+                    height={46}
+                    accentColor="#f6c96a"
+                    onClick={() => window.open('https://wa.me/5511912470733?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20mudar%20para%20o%20plano%20Corporativo%20do%20Orbite.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F', '_blank', 'noopener,noreferrer')}
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
 
         <section className="cta-wrap liquid-glass">
           <div className="cta-glow" />
