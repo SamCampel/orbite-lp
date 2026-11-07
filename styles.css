@@ -195,12 +195,6 @@
       z-index: 1;
     }
 
-    .hero-tag-line {
-      width: 20px;
-      height: 1px;
-      background: var(--amber)
-    }
-
     .hero-h1 {
       font-size: clamp(52px, 8.5vw, 120px);
       font-weight: 900;
@@ -470,22 +464,13 @@
     }
 
     .s-label {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      display: block;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: .12em;
       text-transform: uppercase;
       color: var(--amber);
       margin-bottom: 20px;
-    }
-
-    .s-label::before {
-      content: '';
-      width: 20px;
-      height: 1px;
-      background: var(--amber)
     }
 
     .s-h2 {
@@ -909,24 +894,14 @@
     }
 
     .cta-label {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
+      display: block;
+      text-align: center;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: .12em;
       text-transform: uppercase;
       color: var(--amber);
       margin-bottom: 28px;
-    }
-
-    .cta-label::before,
-    .cta-label::after {
-      content: '';
-      width: 20px;
-      height: 1px;
-      background: var(--amber)
     }
 
     .cta-h2 {
